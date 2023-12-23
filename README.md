@@ -4,3 +4,4 @@
 main_app.py    | Головний файл
 instructions.py| Файл з текстовими інструкціями
 second_win.py  | Другий екран програми
+final_win.py   | Третій екран програми
