@@ -6,20 +6,16 @@ from instructions import *
 
 class FinalWin(QWidget):
     def __init__(self, exp):
-        ''' вікно, в якому проводиться опитування '''
         super().__init__()
-        #отримуємо дані про експеримент
         self.exp = exp
-        # створюємо та налаштовуємо графічні елементи:
         self.initUI()
-        #Встановлює, як виглядатиме вікно (напис, розмір, місце)
         self.set_appear()
         self.show()
 
     def results(self):
         if self.exp.person.age < 7:
             self.index = 0
-            return "нет данных для такого возраста"
+            return "нема даних для такого віку"
         self.index = (4 * (int(self.exp.test1) + int(self.exp.test2) + int(self.exp.test3)) - 200) / 10
         if self.exp.person.age == 7 or self.exp.person.age == 8:
             if self.index >= 21:
@@ -76,9 +72,9 @@ class FinalWin(QWidget):
                 return txt_res4
             else:
                 return txt_res5
-
+                    
+    #створюємо та налаштовуємо графічні елементи   
     def initUI(self):
-        ''' створює графічні елементи '''
         self.workh_text = QLabel(txt_workheart + self.results())
         self.index_text = QLabel(txt_index + str(self.index))
 
@@ -87,9 +83,8 @@ class FinalWin(QWidget):
         self.layout_line.addWidget(self.workh_text, alignment = Qt.AlignCenter)         
         self.setLayout(self.layout_line)
 
-   
+    #встановлює, як виглядатиме вікно (напис, розмір, місце)
     def set_appear(self):
-        ''' встановлює, як виглядатиме вікно (напис, розмір, місце) '''
         self.setWindowTitle(txt_finalwin)
         self.resize(win_width, win_height)
         self.move(win_x, win_y)
