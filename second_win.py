@@ -154,11 +154,6 @@ class TestWin(QWidget):
         self.resize(win_width, win_height)
         self.move(win_x, win_y)
 
-    # def next_click(self):
-    #     self.hide()
-    #     #self.tw = FinalWin()
-        
-
     def next_click(self):
         self.hide()
         self.prs = Person(self.line_name.text, int(self.line_age.text()))
