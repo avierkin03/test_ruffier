@@ -9,7 +9,7 @@ At the end of the exercise, the person lies down, and the number of pulsations i
 
 
 
-Назва файлу    |  Зміст файлу
+The name of the file    |  File contents
 ---------------|------------
 my_app.py      | The first screen of the program
 instructions.py| File with all variables
