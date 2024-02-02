@@ -1,4 +1,4 @@
-# TEST RUFFIER
+# TEST RUFIER
 This program will allow you to conduct an initial diagnosis of your health using the Rufier test.
 
 Rufier's test is a loading complex designed to assess the heart's performance during physical exertion.
